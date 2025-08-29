@@ -7,7 +7,7 @@ export default class PrologueScene extends Phaser.Scene {
 
     preload() {
         // Load a test player sprite
-        this.load.image("player", "assets/player.png");
+        this.load.image("player", "assets/Blue_witch/B_witch_idle.png");
     }
 
     create() {
