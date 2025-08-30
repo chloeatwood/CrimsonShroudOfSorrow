@@ -1,24 +1,22 @@
-import Phaser from "phaser";
+import Player from "../entities/Player.js";
 
 export default class PrologueScene extends Phaser.Scene {
-    constructor() {
-        super({ key: "PrologueScene" });
-    }
-
     preload() {
-        // Load a test player sprite
-        this.load.image("player", "assets/Blue_witch/B_witch_idle.png");
+        this.load.image("player", "assets/");
     }
 
     create() {
-        // Add the player sprite in the middle of the screen
-        this.player = this.physics.add.sprite(400, 300, "player");
+        this.player = new Player(this, 400, 300, "player", {
+            classType: "ranger",
+            health: 100,
+            stamina: 100,
+            speed: 200
+        });
 
-        // Add some test text
-        this.add.text(10, 10, "Prologue Scene: Setup Working", { fontSize: "20px", fill: "#fff" });
+        this.add.text(10, 10, "Player Test Scene", { fontSize: "20px", fill: "#fff" });
     }
 
     update() {
-        // Nothing yet; just a placeholder
+        this.player.update();
     }
 }

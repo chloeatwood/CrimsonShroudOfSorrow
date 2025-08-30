@@ -12,4 +12,4 @@ const config = {
     scene: [PrologueScene]
 };
 
-new Phaser.Game(config);
+const game = new Phaser.Game(config);
